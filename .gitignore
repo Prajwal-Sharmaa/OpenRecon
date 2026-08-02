@@ -1,0 +1,18 @@
+.osint_data/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local data backups produced by the storage layer
+*.bak.json
+*.corrupt.json
+*.tmp
+
+# Editors and OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.claude/
+.agents
+*.zip
