@@ -1,37 +1,158 @@
-# OSINT Investigation Suite
+# 🔍 OpenRecon
 
-A local-first Streamlit application for defensive, public-source research. It helps build search queries for an authorized target, track investigation notes, save useful resources, and export a research-planning summary.
+A local-first Streamlit application designed to simplify **Open Source Intelligence (OSINT)** investigations by organizing search queries, investigation notes, bookmarks, and research resources in one place.
 
-## Features
+OpenRecon helps security researchers and analysts perform structured public-source investigations while keeping all data stored locally.
 
-- Investigation Builder for full name, username, email, phone, domain, website, company, IP address, alias, CCTV assets, Indian public records, and keyword targets.
-- Curated, field-specific search queries across 19 research categories.
-- Google, Bing, and DuckDuckGo launch links with per-query copy-to-clipboard.
-- Local bookmarks for dorks, tools, and investigations.
-- Analyst notes (UTC timestamped) and an investigation review checklist.
-- Searchable toolkit directory of official public-source resources, with field-specific recommendations.
-- CSV, Markdown, and PDF report export.
-- All data is stored locally in `.osint_data/`.
+---
 
-## Run locally
+## ✨ Features
 
-```powershell
-python -m pip install -r requirements.txt
-python -m streamlit run app.py
+### 🕵️ Investigation Builder
+
+Create investigations for:
+
+- Full Name
+- Username
+- Email Address
+- Phone Number
+- Domain
+- Website
+- Company
+- IP Address
+- Alias
+- CCTV Assets
+- Indian Public Records
+- Custom Keywords
+
+---
+
+### 🔎 Search Query Generation
+
+Generate investigation-ready search queries for multiple search engines.
+
+Supported search engines:
+
+- Google
+- Bing
+- DuckDuckGo
+
+Each query can be copied and opened directly in the browser.
+
+---
+
+### 📚 OSINT Toolkit
+
+Includes categorized public resources for:
+
+- Social Media
+- Search Engines
+- Domain Intelligence
+- DNS & WHOIS
+- Metadata
+- Archives
+- Public Records
+- Image Search
+- Maps
+- Threat Intelligence
+
+---
+
+### 📝 Investigation Workspace
+
+- Investigation Notes
+- Investigation Checklist
+- Local Bookmarks
+- Research Tracking
+- UTC Timestamped Notes
+
+---
+
+### 📄 Report Export
+
+Export investigations as:
+
+- PDF
+- Markdown
+- CSV
+
+---
+
+## 🛠 Tech Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Backend |
+| Streamlit | User Interface |
+| Pandas | Data Handling |
+| FPDF2 | PDF Report Export |
+| JSON | Local Data Storage |
+
+---
+
+## 🚀 Getting Started
+
+Clone the repository
+
+```bash
+git clone https://github.com/Prajwal-Sharmaa/OpenRecon.git
 ```
 
-Run the regression checks with:
+Install dependencies
 
-```powershell
+```bash
+pip install -r requirements.txt
+```
+
+Run the application
+
+```bash
+streamlit run app.py
+```
+
+Run tests
+
+```bash
 python -m unittest discover -s tests
 ```
 
-PDF export requires `fpdf2`, which is already listed in `requirements.txt`.
+---
 
-## Data storage
+## 💾 Data Storage
 
-Investigations, notes, bookmarks, and preferences are stored as JSON in `.osint_data/` next to the project. This folder is excluded from version control and should be treated as potentially sensitive local data.
+OpenRecon stores investigations, notes, bookmarks and user preferences locally inside the `.osint_data/` directory.
 
-## Safety boundary
+No investigation data is uploaded automatically to external servers.
 
-The application generates browser launch links for analyst-reviewed public search queries. It does not scrape search engines, bypass logins or CAPTCHAs, run third-party tools, collect credentials, or automate access to private data. Use it only for lawful, authorized defensive investigations.
+---
+
+## 🔒 Ethical Use
+
+OpenRecon is intended for **authorized security research and public-source investigations** only.
+
+The application:
+
+- Generates search queries
+- Organizes investigation data
+- Stores notes locally
+- Does not scrape search engines
+- Does not bypass authentication
+- Does not automate access to private information
+
+Users are responsible for ensuring that all investigations comply with applicable laws and organizational policies.
+
+---
+
+## 📌 Future Improvements
+
+- Additional OSINT resources
+- Better report customization
+- Investigation timeline
+- Advanced filtering
+- Improved dashboard
+
+---
+
+## 📄 License
+
+This project is intended for educational purposes and authorized security research.
